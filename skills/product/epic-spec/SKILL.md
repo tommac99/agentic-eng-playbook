@@ -78,17 +78,17 @@ being built, right now, by whom).
 6. **Create the epic issue**, Release set, appetite stated in the
    body, assignee `alexdev`:
    ```bash
-   gh issue create --repo acme/northwind --title "Epic: <epic title>" \
+   gh issue create --repo alexdev/northwind --title "Epic: <epic title>" \
      --body "<problem, evidence link, appetite, cut list>" --label epic
-   gh issue edit <epic#> --repo acme/northwind --add-assignee alexdev
+   gh issue edit <epic#> --repo alexdev/northwind --add-assignee alexdev
    ```
 
 7. **Create each sub-issue as a real GitHub sub-issue** of the epic (uses the
    `gh sub-issue` extension, already installed in this repo):
    ```bash
-   gh sub-issue create --repo acme/northwind --parent <epic#> \
+   gh sub-issue create --repo alexdev/northwind --parent <epic#> \
      --title "<slice title>" --body "<body from step 8>"
-   gh issue edit <subissue#> --repo acme/northwind --add-assignee alexdev
+   gh issue edit <subissue#> --repo alexdev/northwind --add-assignee alexdev
    ```
 
 8. **Each sub-issue body** follows the repo's feature issue template shape

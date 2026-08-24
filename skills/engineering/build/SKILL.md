@@ -55,7 +55,7 @@ If given an **issue**, go straight to Phase 1.
 Pull the whole chain, never work from the title:
 
 ```bash
-gh issue view <N> --repo acme/northwind --json title,body,labels,parent,projectItems
+gh issue view <N> --repo alexdev/northwind --json title,body,labels,parent,projectItems
 ```
 
 Extract and restate: **acceptance criteria**, **How to test on staging**,
@@ -72,7 +72,7 @@ A sub-issue that satisfies its own AC but does not move the epic is a miss.
    issue is not Ready no matter what the board says.
 2. **Schema conflict gate.** If the issue declares `Schema change:`:
    ```bash
-   gh issue list --repo acme/northwind --state open \
+   gh issue list --repo alexdev/northwind --state open \
      --search "Schema change: in:body" --json number,title,body
    ```
    Another in-flight issue also changing schema → blocked, say so, pick something else.
@@ -101,9 +101,9 @@ Then present the spec and **stop for approval**. It must cover:
   primitive you land on and why: "shadcn `Stepper` plus the existing `FormPanel`, not a
   new component, because the ladder stops at step 1." This is the decision the human
   most needs to see and most often wants to redirect.
-- **Data** — tables read and written. Does it trigger `composeCache()`?
-- **Invariants at risk** — which Critical Rules this could violate. Money in cents,
-  cash basis, `typTag` set only by mutations, no VAT on KU invoices, no hard deletes.
+- **Data** — tables read and written. Does it trigger a derived-cache recompute?
+- **Invariants at risk** — which Critical Rules this could violate. Money stored in
+  the smallest currency unit, a status field set only by mutations, no hard deletes.
 - **AC mapping** — every acceptance criterion, mapped to how it will be proven. A test,
   a manual step, a screenshot. An AC with no proof route is a gap in the issue; raise it.
 - **Best practice, stated** — where there was a choice, say which route you are taking,
@@ -140,7 +140,7 @@ On approval, post the approved spec and plan as a comment on the issue, so it ou
 this session and is visible on the board:
 
 ```bash
-gh issue comment <N> --repo acme/northwind --body "..."
+gh issue comment <N> --repo alexdev/northwind --body "..."
 ```
 
 Set the board card to In Progress. Create the worktree:
