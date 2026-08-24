@@ -57,7 +57,7 @@ is worse than not having run the reviewer.
 
 ### 3. Open the PR
 
-Every PR gets **Thomas as assignee** and **one other human as reviewer**, chosen by
+Every PR gets **Alex as assignee** and **one other human as reviewer**, chosen by
 what the diff touches. `.github/CODEOWNERS` is the mapping:
 
 |Paths|Second reviewer|
@@ -182,7 +182,7 @@ Set the board card to In Review. Report: PR number, CI state, what still needs a
 plan document says to. Not because the task said to. Merging is exclusively a human
 action. Say "PR #N is ready to merge" and stop.
 
-The single exception: Thomas says the words "merge it" in the current turn. Even then,
+The single exception: Alex says the words "merge it" in the current turn. Even then,
 run `gh pr checks` first and say what you are about to do before doing it.
 
 **Never say a PR is ready while a required check is red.** Run the checks before
