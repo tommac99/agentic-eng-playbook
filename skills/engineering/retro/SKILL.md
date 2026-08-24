@@ -87,7 +87,7 @@ as part of running the sweep in step 6, not skipped and merely reported.
 **Epic #40, "Onboarding health-score clarity", appetite one week.**
 
 - Created 2026-08-17, last sub-issue closed 2026-08-27, 10 days vs 7 day
-  appetite, two days over.
+  appetite, three days over.
 - Sub-issues: #58 (tooltip copy), #61 (explainer screen), #62 (analytics
   event), all Done, closed via PR #63, #65, #66.
 
@@ -95,7 +95,7 @@ as part of running the sweep in step 6, not skipped and merely reported.
 a. Bet right: supported, follow-up interview notes
    (`company/research/2026-08-26_beta-check.md`) show 4 of 5 re-tested
    users correctly explained the health score afterward.
-b. Appetite: slightly under, the explainer screen needed one extra design
+b. Appetite: slightly over, the explainer screen needed one extra design
    pass Alex hadn't scoped.
 c. Pattern: appetite for anything touching copy should assume one design
    review round trip by default.
